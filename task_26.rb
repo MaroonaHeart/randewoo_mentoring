@@ -1,6 +1,6 @@
 #Написать итератор по 3 элемента для массива и строк
 
-def iterator_three_el(arr_str)
+def iterator_three_el(arr)
   a = 0
   until a > arr.size - 1
     yield ([arr[a], arr[a+1], arr[a+2]].join(' '))
