@@ -5,5 +5,11 @@ def file_readlines(filename)
   return unless File.exist?(filename)
 
   file_data = File.readlines(filename)
-  file_data.each.with_index(1) { |l, i| puts "#{i} #{l}" }
+
+  i = 0
+
+  while i < file_data.size
+    puts "#{i + 1} #{file_data[i]}"
+    i += 1
+  end
 end

@@ -8,16 +8,17 @@ File.write('artists.txt', text)
 
 def file_copy
   puts 'Введите исходный файл: '
-  filename_1 = gets.chomp
-  puts 'Введите целевой файл: '
-  filename_2 = gets.chomp
-  puts '-----------------'
+  file_source = gets.chomp
 
-  if File.exist?(filename_1)
-    File.write(filename_2, File.read(filename_1), mode: 'a')
-    puts 'Содержимое скопированно!'
-    puts File.readlines(filename_2)
-  else
-    puts 'Исходный файл не существует!'
+  puts 'Введите целевой файл: '
+  file_duplicate = gets.chomp
+
+  return puts 'Такого файла нет!' unless File.exist?(filename)
+
+  file_data = File.readlines(file_source)
+  file_data.each do |l|
+    File.write(file_duplicate, l, mode: 'a')
   end
+
+  puts 'Содержимое скопированно!'
 end
