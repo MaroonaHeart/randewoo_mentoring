@@ -6,7 +6,7 @@ def bomb(num)
   while num >= i
     puts 'Скоро взрыв' if num == 3
     puts num
-    puts 'Boom' if num.zero?
+    puts 'Boom' if num == 0
     num -= 1
   end
 end

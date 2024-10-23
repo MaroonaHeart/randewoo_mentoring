@@ -4,5 +4,5 @@ str = 'Do geese see God'
 
 def palindromes(str)
   string = str.downcase.gsub(/\s+/, '')
-  string == string.reverse
+  string == my_revers(string)
 end

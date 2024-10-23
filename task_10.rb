@@ -60,3 +60,5 @@ def month_number(month)
     'такого месяца нет'
   end
 end
+
+month_number('September')

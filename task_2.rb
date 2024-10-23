@@ -3,15 +3,20 @@
 #Второй вариант в нижнем регистре
 
 def upcase_srting(str)
-  arr_char = str.split(//)
-  arr_char.each do |c|
-    puts c.upcase
+  s = 0
+  while s < str.size
+    puts str[s].upcase
+    s += 1
   end
 end
 
 def downcase_srting(str)
-  arr_char = str.split(//)
-  arr_char.each do |c|
-    puts c.downcase
+  s = 0
+  while s < str.size
+    puts str[s].downcase
+    s += 1
   end
 end
+
+upcase_srting('ШоСсе в ниКудА')
+downcase_srting('OXXXYMIRON')

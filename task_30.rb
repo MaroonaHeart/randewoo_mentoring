@@ -2,20 +2,22 @@
 # У вас три попытки. Комп ждем ваши вариант, если угадал - игра заканчивается. 
 # Комп говорит больше / меньше
 
-# i = 0
-# magic_number = rand(100)
+def games
+  i = 1
+  magic_number = rand(100)
 
-# while i <= 3
-#   puts "Загадайте число:"
-#   number = gets.to_i
-#   if number == magic_number
-#     'Вы угадали !'
-#   elsif number > magic_number
-#     "Число должно быть меньше/n Попробуйте еще раз:"
-#   else
-#     "Число должно быть больше/n Попробуйте еще раз:"
-#   end
-#   i += 1
-# end
+  while i <= 3
+    puts 'Введите загаданное число:'
+    number = gets.to_i
 
-# puts "Число, которое загадал комп #{magic_number}"
+    if number == magic_number
+      'Вы угадали!'
+    elsif number > magic_number
+      puts 'Число должно быть меньше!'
+    else
+      puts 'Число должно быть больше!'
+    end
+    i += 1
+  end
+  puts "Число, которое загадал комп #{magic_number}"
+end
