@@ -7,3 +7,5 @@ class Array
     end
   end
 end
+
+%w[green pink blue orange white].my_include?('pink')

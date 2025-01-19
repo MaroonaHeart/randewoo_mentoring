@@ -1,4 +1,6 @@
-def my_each(arr)
+def my_each1(arr)
+  return unless block_given?
+
   i = 0
   while i < arr.size
     yield(arr[i])
@@ -6,9 +8,11 @@ def my_each(arr)
   end
   arr
 end
-#############################
+
 class Array
-  def my_each
+  def my_each2
+    return unless block_given?
+
     i = 0
     until i == size
       yield(self[i])
@@ -20,6 +24,6 @@ end
 
 arr = [2, 3, 4, 5, 6]
 
-my_each(arr) { |el| puts el * 2 }
+my_each1(arr) { |el| puts el * 2 }
 
-arr.my_each { |el| puts el * 2 }
+arr.my_each2 { |el| puts el * 2 }

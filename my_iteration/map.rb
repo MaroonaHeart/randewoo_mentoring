@@ -1,4 +1,6 @@
-def my_map(arr)
+def my_map1(arr)
+  return unless block_given?
+
   new_arr = []
   i = 0
   while i < arr.size
@@ -7,9 +9,11 @@ def my_map(arr)
   end
   new_arr
 end
-#############################
+
 class Array
-  def my_map
+  def my_map2
+    return unless block_given?
+
     new_arr = []
     i = 0
     until i == size
@@ -22,6 +26,6 @@ end
 
 arr = [2, 3, 4, 5, 6]
 
-my_map(arr) { |el| el * 2 }
+my_map1(arr) { |el| el * 2 }
 
-arr.my_map { |el| el * 2 }
+arr.my_map2 { |el| el * 2 }

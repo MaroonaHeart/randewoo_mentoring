@@ -1,4 +1,6 @@
 def my_select(arr)
+  return unless block_given?
+
   result = arr.my_map { |el| el if yield(el) }
   my_compact(result)
 end
