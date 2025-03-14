@@ -1,12 +1,12 @@
 #Написать аналог reverse для строк
 
-def my_revers(str)
-  medium = str.size / 2
-  ch = 0
+def reverse_str(str)
+  i = str.size - 1
+  new_str = []
 
-  while ch < medium
-    str[ch], str[-ch-1] = str[-ch-1], str[ch]
-    ch += 1
+  while i >= 0
+    new_str << str[i]
+    i -= 1
   end
-  str
+  new_str.join('')
 end
