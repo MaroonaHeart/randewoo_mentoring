@@ -5,7 +5,9 @@ class Array
       return true if self[i] == el
       i += 1
     end
+    return false
   end
 end
 
 %w[green pink blue orange white].my_include?('pink')
+[1,2,3,4].my_include?(13)
